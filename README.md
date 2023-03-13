@@ -17,7 +17,6 @@ The setup has some goals and non-goals (which I may work on in the future):
 * ✔️ Run immediately after the initial install of Windows
 * ✔️ Run solely from Windows Terminal (Elevated as Administrator)
 * ✔️ The setup should be initiated from a **single command** such as `Invoke-WebRequest <url here>/setup.ps1 | Invoke-Expression`
-`
 * ✔️ Have little or no user interaction (no prompts, no questions, no input)
 * ✔️ Should be idempotent (can be run multiple times without breaking anything)
 * ✔️ Uses PowerShell as much as possible (no `.bat`, `.cmd` files)
