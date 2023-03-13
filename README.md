@@ -30,38 +30,34 @@ The setup has some goals and non-goals (which I may work on in the future):
 
 * ❓ If possible, automate any required restarts **and user logins** and continue the process after the restart, possibly by using SysInternals AutoLogon and a temporary scheduled task to continue the script, all of which would be cleaned up after the process is completed. This would require the script to be able to track it's progress and continue from where it left off.
 
-
 ### /windows/standard
 Scripts and configuration for setting up a new Windows machine
 
-```
-Chrome
-VLC
-Spotify
-Discord
-WhatsApp
-Steam
-Paint.NET
-Microsoft Office
-Microsoft PowerToys
-Gyazo
-OBS Studio
-Monitorian for monitor brightness control (Windows on desktop generally doesn't have this even if the monitor supports it)
-Ensure file extensions are shown in Explorer
-Enable inbound Remote Desktop connections
-```
+* Chrome
+* VLC
+* Spotify
+* Discord
+* WhatsApp
+* Steam
+* Paint.NET
+* Microsoft Office
+* Microsoft PowerToys
+* Gyazo
+* OBS Studio
+* Monitorian for monitor brightness control (Windows on desktop generally doesn't have this even if the * monitor supports it)
+* Ensure file extensions are shown in Explorer
+* Enable inbound Remote Desktop connections
 
 ### /windows-development-setup
 Scripts and configuration for setting up a new Windows machine for development (based on standard, but with additional setup)
 
-```
-Latest Powershell (not the version that comes with Windows)
-Hyper-V and related virtualisation Windows Features
-WSL2
-Docker
-Visual Studio (use WinGet's --override to provide selected workloads)
-.NET 7 and .NET 7 SDKs (installed via Visual Studio)
-Visual Studio Code
-NVM for Windows (latest non-LTS version of Node and NPM)
-Tailscale mesh VPN
-```
+* Latest Powershell (not the version that comes with Windows)
+* Hyper-V and related virtualisation Windows Features
+* WSL2
+* Docker
+* Git
+* Visual Studio (use WinGet's --override to provide [/development/.vsconfig](windows/development/.vsconfig))
+* .NET 7 and .NET 7 SDKs (installed via Visual Studio)
+* Visual Studio Code
+* NVM for Windows (latest non-LTS version of Node and NPM)
+* Tailscale mesh VPN
