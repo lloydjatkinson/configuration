@@ -49,7 +49,7 @@ Scripts and configuration for setting up a new Windows machine
 * Ensure file extensions are shown in Explorer
 * Enable inbound Remote Desktop connections
 
-### /windows-development-setup
+### /windows/development
 Scripts and configuration for setting up a new Windows machine for development (based on standard, but with additional setup)
 
 * Latest Powershell (not the version that comes with Windows)
