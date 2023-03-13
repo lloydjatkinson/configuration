@@ -34,17 +34,19 @@ The setup has some goals and non-goals (which I may work on in the future):
 Scripts and configuration for setting up a new Windows machine
 
 * Chrome
-* VLC
 * Spotify
 * Discord
 * WhatsApp
+* VLC
 * Steam
 * Paint.NET
-* Microsoft Office
-* Microsoft PowerToys
 * Gyazo
 * OBS Studio
-* Monitorian for monitor brightness control (Windows on desktop generally doesn't have this even if the * monitor supports it)
+* qBitTorrent
+* Microsoft Office
+* Microsoft PowerToys
+* Monitorian for monitor brightness control (Windows on desktop generally doesn't have this even if the monitor supports it)
+
 * Ensure file extensions are shown in Explorer
 * Enable inbound Remote Desktop connections
 
@@ -60,4 +62,5 @@ Scripts and configuration for setting up a new Windows machine for development (
 * .NET 7 and .NET 7 SDKs (installed via Visual Studio)
 * Visual Studio Code
 * NVM for Windows (latest non-LTS version of Node and NPM)
+* OpenSSH Windows Feature
 * Tailscale mesh VPN
