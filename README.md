@@ -45,7 +45,6 @@ Scripts and configuration for setting up a new Windows machine
 * Microsoft Office
 * Microsoft PowerToys
 * Monitorian for monitor brightness control (Windows on desktop generally doesn't have this even if the monitor supports it)
-
 * Ensure file extensions are shown in Explorer
 * Enable inbound Remote Desktop connections
 
