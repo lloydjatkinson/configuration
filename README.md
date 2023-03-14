@@ -6,14 +6,6 @@ The standard configuration acts as the base for any further configuration, this 
 
 The setup has some goals and non-goals (which I may work on in the future):
 
-* ✋ Does **not** create Windows images, deploy Windows images, answer files, make use of MDT or SCCM or other standard IT tools. These require more work and investment and are great tools but not what I'm aiming to use for my personal machines (or family and friends machines).
-* ✋ Does **not** automate the very initial install of Windows OOBE (the setup process where the serial number is entered, the language is selected, etc).
-* ✋ Does **not** sign in to various accounts for applications or sites
-* ✋ Does **not** install drivers (different machines are going to have different drivers, and hopefully Windows Update can install most if not all of them - for now this will be a manual step unless I see the same set of drivers and machines in which case another step could be created)
-* ✋ Does **not** setup network connections and WiFi
-
----
-
 * ✔️ Run immediately after the initial install of Windows
 * ✔️ Run solely from Windows Terminal (Elevated as Administrator)
 * ✔️ The setup should be initiated from a **single command** such as `Invoke-WebRequest <url here>/setup.ps1 | Invoke-Expression`
@@ -24,6 +16,15 @@ The setup has some goals and non-goals (which I may work on in the future):
 * ✔️ Installs and enables Windows Features, Windows Update, etc
 * ✔️ Automates and installs all software by using WinGet (Windows Package Manager)
 * ✔️ Restarts the machine once the entire process is completed
+
+---
+
+* ✋ Does **not** create Windows images, deploy Windows images, answer files, make use of MDT or SCCM or other standard IT tools. These require more work and investment and are great tools but not what I'm aiming to use for my personal machines (or family and friends machines).
+* ✋ Does **not** automate the very initial install of Windows OOBE (the setup process where the serial number is entered, the language is selected, etc).
+* ✋ Does **not** sign in to various accounts for applications or sites
+* ✋ Does **not** install drivers (different machines are going to have different drivers, and hopefully Windows Update can install most if not all of them - for now this will be a manual step unless I see the same set of drivers and machines in which case another step could be created)
+* ✋ Does **not** setup network connections and WiFi
+* ✋ Does **not** modify the Windows Registry unless absolutely necessary (often the case for shell/UI settings, such as setting the Start Menu to the left on Windows 11)
 
 ---
 
