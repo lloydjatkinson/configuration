@@ -15,6 +15,7 @@ The setup has some goals and non-goals (which I may work on in the future):
 * ✔️ Uses PowerShell DSC (Desired State Configuration) as much as possible (but only if this does not break the "single command" requirement), for:
 * ✔️ Installs and enables Windows Features, Windows Update, etc
 * ✔️ Automates and installs all software by using WinGet (Windows Package Manager)
+* ✔️ For the development setup: installs and configures Hyper-V, WSL2, Docker, Visual Studio, etc
 * ✔️ Restarts the machine once the entire process is completed
 
 ---
