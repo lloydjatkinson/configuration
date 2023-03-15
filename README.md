@@ -38,22 +38,27 @@ Scripts and configuration for setting up a new Windows machine
 * Spotify
 * Discord
 * WhatsApp
+* Skype (ships with Windows)
 * VLC
 * Steam
 * Paint.NET
 * Gyazo
 * OBS Studio
 * qBitTorrent
+* Obsidian
 * Microsoft Office
 * Microsoft PowerToys
 * Monitorian for monitor brightness control (Windows on desktop generally doesn't have this even if the monitor supports it)
-* Ensure file extensions are shown in Explorer
+* Ensure file extensions are shown in Explorer and configure the shell/UI (such as Taskbar and Start Menu)
 * Enable inbound Remote Desktop connections
+* Disable some "run when you log in" applications such as Steam
 
 ### /windows/development
 Scripts and configuration for setting up a new Windows machine for development (based on standard, but with additional setup)
 
-* Latest Powershell (not the version that comes with Windows)
+* Latest PowerShell (not the version that comes with Windows)
+* Set latest PowerShell as the default/startup profile in Windows Terminal
+* Windows Terminal appearance
 * Hyper-V and related virtualisation Windows Features
 * WSL2
 * Docker
