@@ -1,3 +1,5 @@
+#Requires -RunAsAdministrator
+
 function Invoke-SoftwareInstallationWithWinGet {
     Write-Host "Installing software via WinGet" -ForegroundColor Green
 
