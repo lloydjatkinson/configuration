@@ -82,3 +82,5 @@ function Invoke-Setup {
         Write-Error "Something went wrong!"
     }
 }
+
+Invoke-Setup
