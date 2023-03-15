@@ -76,6 +76,7 @@ function Invoke-Setup {
         Invoke-SoftwareInstallationWithWinGet
         Show-FileExtensions
         Hide-OneDriveExplorerIcon
+        Set-Taskbar
         Set-WindowsTerminalDefaultProfile
     }
     catch {
