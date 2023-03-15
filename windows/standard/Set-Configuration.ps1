@@ -59,7 +59,12 @@ function Show-FileExtensions {
 
 function Hide-OneDriveExplorerIcon {
     Write-Host "Hiding OneDrive icon in Explorer navigation pane" -ForegroundColor Green
-    Set-ItemProperty -Path "HKCR:\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Name "System.IsPinnedToNameSpaceTree" -Value 0 -Type DWord
+    [Microsoft.Win32.Registry]::SetValue("HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}", "System.IsPinnedToNameSpaceTree", 0)
+}
+
+function Hide-DesktopIcons {
+    Write-Host "Hiding desktop icons" -ForegroundColor Green
+    Set-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced' -Name 'HideIcons' -Value 1
 }
 
 function Set-WindowsTerminalDefaultProfile {
