@@ -88,7 +88,8 @@ function Invoke-Setup {
         (New-Object System.Media.SoundPlayer $(Get-ChildItem -Path "$env:windir\Media\Windows Logon.wav").FullName).Play()
         Write-Host "Windows configured and software installed OK" -ForegroundColor Green
         Write-Host "Restarting in a few moments" -ForegroundColor Green
-        Start-Sleep 5000
+        Start-Sleep 5
+        Restart-Computer
     }
     catch {
         Write-Error "Something went wrong!"
