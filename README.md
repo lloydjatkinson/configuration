@@ -1,6 +1,8 @@
 # configuration
 Scripts for automation, machine setup, environment configuration, etc.
 
+## **Early stagegs of development! 🛠️**
+
 ## Windows
 The standard configuration acts as the base for any further configuration, this is for a generic general purpose Windows machine. The development setup is based on the standard configuration, but adds additional setup for development.
 
