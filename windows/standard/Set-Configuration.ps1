@@ -83,6 +83,12 @@ function Invoke-Setup {
         Hide-OneDriveExplorerIcon
         Set-Taskbar
         Set-WindowsTerminalDefaultProfile
+        Stop-Process -Name "explorer"
+
+        (New-Object System.Media.SoundPlayer $(Get-ChildItem -Path "$env:windir\Media\Windows Logon.wav").FullName).Play()
+        Write-Host "Windows configured and software installed OK" -ForegroundColor Green
+        Write-Host "Restarting in a few moments" -ForegroundColor Green
+        Start-Sleep 5000
     }
     catch {
         Write-Error "Something went wrong!"
