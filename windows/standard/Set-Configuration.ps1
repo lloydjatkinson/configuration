@@ -4,7 +4,7 @@ function Invoke-SoftwareInstallationWithWinGet {
     Write-Host "📁 Installing software via WinGet" -ForegroundColor Green
 
     # Accept stupid legal terms that break automation.
-    echo Y | winget list
+    echo Y | winget list | Out-Null
     
     winget install --id Microsoft.Powershell --source winget
     winget install --id=Google.Chrome -e
