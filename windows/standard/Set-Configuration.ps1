@@ -92,6 +92,7 @@ function Invoke-Setup {
         Invoke-SoftwareInstallationWithWinGet
         Show-FileExtensions
         Hide-OneDriveExplorerIcon
+        Hide-DesktopIcons
         Set-Taskbar
         Set-WindowsTerminalDefaultProfile
         Get-WindowsUpdates
