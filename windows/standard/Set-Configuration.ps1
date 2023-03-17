@@ -81,6 +81,7 @@ function Set-WindowsTerminalDefaultProfile {
 function Get-WindowsUpdates {
     Install-PackageProvider -Name NuGet -Force
     Install-Module PSWindowsUpdate -Force
+    Import-Module PSWindowsUpdate
     Get-WindowsUpdate -AcceptAll -Install
 }
 
