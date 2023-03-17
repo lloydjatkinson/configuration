@@ -80,8 +80,7 @@ function Set-WindowsTerminalDefaultProfile {
 
 function Get-WindowsUpdates {
     Install-Module PSWindowsUpdate -Force
-    Get-WindowsUpdate
-    Install-WindowsUpdate
+    Get-WindowsUpdate -AcceptAll -Install
 }
 
 function Invoke-Setup {
