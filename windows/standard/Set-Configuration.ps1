@@ -50,6 +50,8 @@ function Set-Taskbar {
     foreach ($key in $registryKeys) {
         [Microsoft.Win32.Registry]::SetValue($key.Path, $key.Name, $key.Value)
     }
+
+    Stop-Process -Name "explorer"
 }
 
 function Show-FileExtensions {
@@ -76,6 +78,12 @@ function Set-WindowsTerminalDefaultProfile {
     $jsonContent | ConvertTo-Json -Depth 32 | Set-Content -Path $jsonFilePath
 }
 
+function Get-WindowsUpdates {
+    Install-WindowsUpdate -Force
+    Get-WindowsUpdate
+    Install-WindowsUpdate
+}
+
 function Invoke-Setup {
     try {
         Invoke-SoftwareInstallationWithWinGet
@@ -83,11 +91,12 @@ function Invoke-Setup {
         Hide-OneDriveExplorerIcon
         Set-Taskbar
         Set-WindowsTerminalDefaultProfile
-        Stop-Process -Name "explorer"
+        Get-WindowsUpdates
 
         (New-Object System.Media.SoundPlayer $(Get-ChildItem -Path "$env:windir\Media\Windows Logon.wav").FullName).Play()
         Write-Host "Windows configured and software installed OK" -ForegroundColor Green
         Write-Host "Restarting in a few moments" -ForegroundColor Green
+        
         Restart-Computer
     }
     catch {
