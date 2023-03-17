@@ -79,7 +79,7 @@ function Set-WindowsTerminalDefaultProfile {
 }
 
 function Get-WindowsUpdates {
-    Install-Module PSWindowsUpdate -Force
+    echo Y | Install-Module PSWindowsUpdate -Force
     Get-WindowsUpdate -AcceptAll -Install
 }
 
