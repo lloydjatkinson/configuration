@@ -1,6 +1,6 @@
 function Invoke-StandardSetup {
     Write-Host "🛠️ Applying standard setup first" -ForegroundColor Green
-    powershell -Command "iwr -useb https://raw.githubusercontent.com/lloydjatkinson/configuration/master/windows/standard/Set-Configuration.ps1 | iex"
+    Invoke-WebRequest -useb https://raw.githubusercontent.com/lloydjatkinson/configuration/master/windows/standard/Set-Configuration.ps1 | Invoke-Expression
 }
 
 function Invoke-DevelopmentSetup {
