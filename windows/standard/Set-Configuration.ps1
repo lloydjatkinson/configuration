@@ -87,7 +87,7 @@ function Get-WindowsUpdates {
     Set-ExecutionPolicy Restricted
 }
 
-function Invoke-Setup {
+function Invoke-StandardSetup {
     try {
         Invoke-SoftwareInstallationWithWinGet
         Show-FileExtensions
@@ -108,4 +108,4 @@ function Invoke-Setup {
     }
 }
 
-Invoke-Setup
+Invoke-StandardSetup
