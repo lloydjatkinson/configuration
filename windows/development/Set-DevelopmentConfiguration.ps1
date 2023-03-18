@@ -7,7 +7,7 @@ function Invoke-SoftwareInstallationWithWinGet {
     echo Y | winget list | Out-Null
     
     winget install --id Microsoft.Powershell --source winget
-
+    
 }
 
 function Set-WindowsTerminalDefaultProfile {
@@ -25,7 +25,9 @@ function Set-HyperVAndWsl {
     Enable-WindowsOptionalFeature -Online -FeatureName "HypervisorPlatform" -All -NoRestart
     Enable-WindowsOptionalFeature -Online -FeatureName "VirtualMachinePlatform" -All -NoRestart
     Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Hyper-V" -All -NoRestart
-    Enable-WindowsOptionalFeature -Online -FeatureName ServicesForNFS-ClientOnly, ClientForNFS-Infrastructure, NFS-Administration
+    Enable-WindowsOptionalFeature -Online -FeatureName ServicesForNFS-ClientOnly, ClientForNFS-Infrastructure, NFS-Administration -NoRestart
+    wsl --install
+    wsl --set-default-version 2
 }
 
 function Invoke-DevelopmentSetup {
