@@ -6,8 +6,18 @@ function Invoke-SoftwareInstallationWithWinGet {
     # Accept stupid legal terms that break automation.
     echo Y | winget list | Out-Null
     
-    winget install --id Microsoft.Powershell --source winget
-    
+    winget install --id Microsoft.Powershell --source winget -e
+    winget install --id=Docker.DockerDesktop -e
+    winget install --id=Microsoft.VisualStudioCode -e
+    winget install --id=Git.Git -e
+    winget install --id=Axosoft.GitKraken -e
+    winget install --id=CoreyButler.NVMforWindows -e
+    winget install --id=PuTTY.PuTTY  -e
+    winget install --id=tailscale.tailscale -e
+
+    $vsConfigFilePath = "$([Environment]::GetFolderPath('MyDocuments'))\.vsconfig"
+    Invoke-WebRequest -Uri "https://github.com/lloydjatkinson/configuration/raw/master/windows/development/.vsconfig" -OutFile $vsConfigFilePath
+    winget install --id Microsoft.VisualStudio.2022.Community --override "--passive --config $vsConfigFilePath"
 }
 
 function Set-WindowsTerminalDefaultProfile {
